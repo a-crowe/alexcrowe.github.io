@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alex Crowe — Designer, Maker</title>
+<meta name="description" content="Alex Crowe — creative practitioner, designer, maker.">
+<style>
+  :root {
+    --bg: #f6f4ef;
+    --ink: #1c1c1a;
+    --muted: #77736a;
+    --line: #d9d5cc;
+    --max: 1100px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); transition: border-color .2s; }
+  a:hover, a:focus { border-color: var(--ink); }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+  header { padding: 18vh 0 12vh; }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+    font-size: clamp(2.6rem, 9vw, 5.5rem);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .tagline {
+    margin-top: 1.25rem;
+    color: var(--muted);
+    font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+    letter-spacing: 0.04em;
+  }
+
+  .label {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 2rem;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    padding-bottom: 14vh;
+  }
+  figure img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    background: #e8e4dc;
+  }
+  figcaption {
+    margin-top: 0.9rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  figcaption span { color: var(--ink); margin-right: 0.6rem; }
+
+  footer { padding-bottom: 10vh; }
+  .contact { list-style: none; display: grid; gap: 0.5rem; font-size: clamp(1rem, 3vw, 1.25rem); }
+  .copy { margin-top: 4rem; font-size: 0.75rem; color: var(--muted); }
+
+  @media (min-width: 760px) {
+    .wrap { padding: 0 48px; }
+    .projects { grid-template-columns: 1fr 1fr; gap: 3rem; }
+    .projects figure:nth-child(2) { margin-top: 8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="wrap">
+    <h1>Alex Crowe</h1>
+    <p class="tagline">Creative practitioner, designer, maker.</p>
+  </header>
+
+  <main class="wrap">
+    <p class="label">Selected work</p>
+    <section class="projects">
+      <figure>
+        <img src="photo1.jpg" alt="[caption 1]" loading="lazy">
+        <figcaption><span>01</span>[caption 1]</figcaption>
+      </figure>
+      <figure>
+        <img src="photo2.jpg" alt="[caption 2]" loading="lazy">
+        <figcaption><span>02</span>[caption 2]</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p class="label">Contact</p>
+    <ul class="contact">
+      <li><a href="tel:+61455452596">0455 452 596</a></li>
+      <li><a href="mailto:alexjockcrowe@gmail.com">alexjockcrowe@gmail.com</a></li>
+    </ul>
+    <p class="copy">&copy; <span id="y">2026</span> Alex Crowe</p>
+  </footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
